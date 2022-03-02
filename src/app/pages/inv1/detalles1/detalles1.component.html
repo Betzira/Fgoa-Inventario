@@ -1,2 +1,53 @@
 <p>detalles1 works!</p>
 {{ value | json }}
+
+<div style="padding: 30px;">
+    <button [routerLink]="'/lista1'" type="button" class="btn btn-info" style="float: right; color: white;">
+        <i class="bi bi-arrow-left-circle-fill" style="color: blue"></i>
+        Volver
+    </button>
+</div>
+
+<br>
+
+
+<div class="card m-5">
+
+    <div class="card-header" style="background-color: #c9b18b; color: #505050;">
+        Detalles de artículo
+    </div>
+
+    <div class="card-body" style="background-color: #e6dec8;">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                Artículo: <h5>Mousea</h5>
+            </li>
+            <li class="list-group-item">
+                Marca: <h5>Delll</h5>
+            </li>
+            <li class="list-group-item">
+                Serie: <h5>Mo-L672</h5>
+            </li>
+            <li class="list-group-item">
+                Ip: <h5>172.2.19.5</h5>
+            </li>
+        </ul>
+    </div>
+
+    <div class="btn-group" role="group" style="padding: 20px;">
+        <!-- <button [routerLink]="'/nuevo1'" type="button" class="btn btn-info" style="float: right; color: white;">
+            <i class="bi bi-plus-lg" style="color: green;"></i>
+            Nuevo
+        </button> -->
+        <button type="button" class="btn btn-info m-2 btn-sm" style="color: white; border-radius: 5px;">
+            <i class="bi bi-pencil-square" style="color: blue;"></i>
+            Editar
+        </button>
+
+        <button type="button" class="btn btn-info m-2 btn-sm" style="color: white; border-radius: 5px;">
+            <i class="bi bi-trash3-fill" style="color: red;"></i>
+            Borrar
+        </button>
+    </div>
+
+</div>
