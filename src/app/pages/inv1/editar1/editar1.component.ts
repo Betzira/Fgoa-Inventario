@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,12 +10,34 @@ import { Router } from '@angular/router';
 export class Editar1Component implements OnInit {
 
   value ; //value = null;
-  constructor( private router: Router) {
+  lista1Form! : FormGroup;
+  constructor( private router: Router, private fb: FormBuilder) {
     const navigation = this.router.getCurrentNavigation();
     this.value = navigation?.extras?.state;
    }
 
+  
+
   ngOnInit(): void {
+    this.initForm();
+  }
+
+  
+
+  private initForm(): void {
+    this.lista1Form = this.fb.group(
+      {
+      articulo: ['', [Validators.required]],
+      marca: ['', [Validators.required]],
+      serie: ['', [Validators.required]],
+      ip: ['', [Validators.required]],
+      nota: ['', [Validators.required]]
+      }
+    );
+  }
+
+  onSave(): any {
+    console.log('Cambios guardados', this.lista1Form.value);
   }
 
 }
