@@ -17,10 +17,13 @@ export class Detalles1Component implements OnInit {
   articulo: any = null ; //value = null;
   constructor( private router: Router ) {
     const navigation = this.router.getCurrentNavigation();
-    this.articulo = navigation?.extras?.state;
+    this.articulo = navigation?.extras?.state?.value;
    }
 
   ngOnInit(): void {
+    if ( typeof this.articulo == 'undefined' ){
+      this.router.navigate(['lista1']);
+    }
   }
 
   onGoToEdit(): void {

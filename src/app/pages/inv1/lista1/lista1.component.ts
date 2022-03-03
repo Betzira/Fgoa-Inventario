@@ -14,6 +14,37 @@ export class Lista1Component implements OnInit {
     }
   };
 
+  fakeData = [
+    {
+      articulo:'Eterneth',
+      marca: 'trupper',
+      serie: 'befuf',
+      ip: '23.2.3.1',
+      nota: 'es una nota'
+    },
+    {
+      articulo:'Cable',
+      marca: 'Lenovo',
+      serie: 'befuf',
+      ip: '23.2.3.1',
+      nota: 'es una nota'
+    },
+    {
+      articulo:'Pc',
+      marca: 'Dell',
+      serie: 'befuf',
+      ip: '23.2.3.1',
+      nota: 'es una nota'
+    },
+    {
+      articulo:'Disco duro',
+      marca: 'Hp',
+      serie: '12345',
+      ip: '23.2.3.1',
+      nota: 'es una nota'
+    }
+  ]
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {

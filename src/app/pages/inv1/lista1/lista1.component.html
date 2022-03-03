@@ -34,12 +34,12 @@
             </tr>
         </thead>
         <tbody >
-            <tr style="background-color: #e6dec8" *ngFor="let item1 of [0, 1, 2, 3, 4]" >
-                <td>Mouse</td>
-                <td>Dell</td>
-                <td>1Q34FR72</td>
-                <td>192.46.1.16</td>
-                <td>En resguardo</td>
+            <tr style="background-color: #e6dec8" *ngFor="let item1 of fakeData" >
+                <td>{{ item1.articulo }}</td>
+                <td>{{ item1.marca }}</td>
+                <td>{{ item1.serie }}</td>
+                <td>{{ item1.ip }}</td>
+                <td>{{ item1.nota }}</td>
 
                 <!-- <td class="bnt-group d-none d-sm-block"><button type="button" class="btn btn-info"><i class="bi bi-eye" style="color: green;"></i></button></td>
 

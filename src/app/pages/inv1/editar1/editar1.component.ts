@@ -11,18 +11,24 @@ export class Editar1Component implements OnInit {
 
   value ; //value = null;
   lista1Form! : FormGroup;
+
   constructor( private router: Router, private fb: FormBuilder) {
     const navigation = this.router.getCurrentNavigation();
-    this.value = navigation?.extras?.state;
+    this.value = navigation?.extras?.state?.value;
+    this.initForm();
    }
 
   
 
   ngOnInit(): void {
-    this.initForm();
-  }
 
-  
+    if (typeof this.value == 'undefined'){
+      this.router.navigate(['nuevo1']);
+    } else {
+      this.lista1Form.patchValue(this.value);
+    }
+
+  }
 
   private initForm(): void {
     this.lista1Form = this.fb.group(
@@ -38,6 +44,10 @@ export class Editar1Component implements OnInit {
 
   onSave(): any {
     console.log('Cambios guardados', this.lista1Form.value);
+  }
+
+  onGoBackToList(): void {
+    this.router.navigate(['lista1']);
   }
 
 }
