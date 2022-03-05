@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { Articulo } from 'src/app/shared/models/articulo1.interface';
 
 @Component({
   selector: 'app-detalles1',
@@ -7,6 +8,9 @@ import { NavigationExtras, Router } from '@angular/router';
   styleUrls: ['./detalles1.component.css']
 })
 export class Detalles1Component implements OnInit {
+
+  articulo: Articulo; //value = null;
+  
   navigationExtras: NavigationExtras = {
     state!: {
     // state!: {
@@ -14,7 +18,7 @@ export class Detalles1Component implements OnInit {
     }
   };
 
-  articulo: any = null ; //value = null;
+  //articulo: any = null ; //value = null;
   constructor( private router: Router ) {
     const navigation = this.router.getCurrentNavigation();
     this.articulo = navigation?.extras?.state?.value;
