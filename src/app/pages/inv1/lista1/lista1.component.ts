@@ -18,30 +18,42 @@ export class Lista1Component implements OnInit {
     {
       articulo:'Eterneth',
       marca: 'trupper',
+      nombre: 'sistemasfgoa',
       serie: 'befuf',
       ip: '23.2.3.1',
-      nota: 'es una nota'
+      mac: 'oo:cc:oo',
+      accesorios: 'mouse',
+      ubicacion: 'sistemas0'
     },
     {
       articulo:'Cable',
       marca: 'Lenovo',
+      nombre: 'sistemasfgoa',
       serie: 'befuf',
       ip: '23.2.3.1',
-      nota: 'es una nota'
+      mac: 'oo:cc:oo1',
+      accesorios: 'mouse1',
+      ubicacion: 'sistemas1'
     },
     {
       articulo:'Pc',
       marca: 'Dell',
+      nombre: 'sistemasfgoa',
       serie: 'befuf',
       ip: '23.2.3.1',
-      nota: 'es una nota'
+      mac: 'oo:cc:oo2',
+      accesorios: 'mouse2',
+      ubicacion: 'sistemas2'
     },
     {
       articulo:'Disco duro',
       marca: 'Hp',
+      nombre: 'sistemasfgoa',
       serie: '12345',
       ip: '23.2.3.1',
-      nota: 'es una nota'
+      mac: 'oo:cc:oo3',
+      accesorios: 'mouse3',
+      ubicacion: 'sistemas3'
     }
   ]
 
@@ -63,7 +75,7 @@ export class Lista1Component implements OnInit {
   }
 
   onGoToDelete(item1: any): void {
-    alert('SE HA ELIMINADO');
+    alert('Artículo eliminado');
   }
 
 }

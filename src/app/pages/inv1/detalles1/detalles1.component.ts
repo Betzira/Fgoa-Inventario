@@ -37,7 +37,7 @@ export class Detalles1Component implements OnInit {
   }
 
   onDelete(): void {
-    alert('SE HA ELIMINADO');
+    alert('Artículo eliminado');
   }
 
   onGoBackToList(): void {

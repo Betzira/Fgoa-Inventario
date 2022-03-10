@@ -36,9 +36,12 @@ export class ArticuloFormComponent implements OnInit {
       {
       articulo: ['', [Validators.required]],
       marca: ['', [Validators.required]],
+      nombre: ['', [Validators.required]],
       serie: ['', [Validators.required]],
       ip: ['', [Validators.required]],
-      nota: ['', [Validators.required]]
+      mac: ['', [Validators.required]],
+      accesorios: ['', [Validators.required]],
+      ubicacion: ['', [Validators.required]]
       }
     );
   }
